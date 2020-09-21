@@ -20,7 +20,7 @@ function getElAndScroll() {
   let element = document.getElementById(hashFragment);
   
   if (element == null) {
-  element = document.getElementByName(hashFragment);
+   element = document.getElementsByName(hashFragment)[0];
   }
   
   if (element !== null) {
