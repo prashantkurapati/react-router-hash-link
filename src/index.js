@@ -17,7 +17,12 @@ function reset() {
 }
 
 function getElAndScroll() {
-  const element = document.getElementById(hashFragment);
+  let element = document.getElementById(hashFragment);
+  
+  if (element == null) {
+  element = document.getElementByName(hashFragment);
+  }
+  
   if (element !== null) {
     scrollFunction(element);
     reset();
